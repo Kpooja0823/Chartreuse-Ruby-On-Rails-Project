@@ -2,14 +2,13 @@
 
 ## Team Members
 
-- Pooja Kamshetty (kamshettypooja5@gmail.com , kamshettypooja23@gmail.com)
-- Vishwajeet Mannepalli ( mannepallivishwajeet@gmail.com, vishwajeetmemphis@gmail.com)
-- Anil Vemana (anilvemana.spring2022@gmail.com,Chowdaryanil501@gmail.com)
-- Sravani Muthyam (muthyamsravani408@gmail.com,muthyamsravani2695@gmail.com)
+- Pooja Kamshetty 
+- Vishwajeet Mannepalli
+- Anil Vemana
+- Sravani Muthyam
 
 
 # Instructions on how to run the application
-
 
 
 ## 1.Clone our repository
