@@ -1,0 +1,164 @@
+
+
+
+
+<head>
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #f4aec6;
+  color: black;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+
+
+<div class="about-section">
+<h1 class="qwerty"> ABOUT THE CUP CAKE PROJECT </h1>
+  <h1>About Us Page</h1>
+<div class="sp" >
+    <%= image_tag 'cupcake-12.jpg', class: 'w-100 rounded-circle', style: 'max-width: 20rem;' %>
+
+<p class = "text">
+Hello Everyone. This is Team - Chartuese. This is a Cup Cake project. We are Team of four Members 
+<br>
+
+&#x2022; Pooja Kamshetty 
+&#x2022; Sravani Muthyam 
+&#x2022; Vishwajeet Manepalli
+&#x2022; Anil Vemana 
+<br>
+Cupcake Lovers surf for their favorite CupCakes. 
+All the best Cupcakes in each state of the USA are listed here. 
+<br>
+“The blog, created in 2007 by recipe developer Stef Pollack, is packed with baking tips,
+ instructional videos, and lots and lots of cupcake recipes.”
+ - Nicole Rufus of Kitchn
+ <br>
+ “always creative”
+-Huffington Post
+ <br>
+</p>
+</div>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <%= image_tag 'team1.jpg' %>
+      <div class="container">
+        <h2>Pooja Kamshetty</h2>
+        <p class="title">developer</p>
+        <p>kamshettypooja23@gmail.com</p>
+         <a href = "https://wa.me/+918332935636?text=urlencodedtext">
+        <p><button class="button">Contact</button></p>
+        </a>
+              </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <%= image_tag 'team2.jpg' %>
+      <div class="container">
+        <h2>Vishwajeet Mannepalli</h2>
+        <p class="title">Backend developer</p>
+        <p>vishwajeetmemphis@gmail.com</p>
+
+         <a href = "https://wa.me/+19012707872?text=urlencodedtext">
+        <p><button class="button">Contact</button></p>
+        </a>      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <%= image_tag 'team3.jpg' %>
+      <div class="container">
+        <h2>Sravani Muthyam</h2>
+        <p class="title">Webpage Designer</p>
+         <p>muthyamsravani408@gmail.com</p>
+         <a href = "https://wa.me/+917997699202?text=urlencodedtext">
+        <p><button class="button">Contact</button></p>
+        </a>
+      </div>
+    </div>
+  </div>
+    <div class="column">
+    <div class="card">
+      <%= image_tag 'team4.jpg' %>
+      <div class="container">
+        <h2>Anil Chowdary</h2>
+        <p class="title">Webpage Designer</p>
+         <p>anilvemana.spring2022@gmail.com</p>
+         <a href = "https://wa.me/+19452093058?text=urlencodedtext">
+        <p><button class="button">Contact</button></p>
+        </a>      </div>
+    </div>
+  </div>
+</div>
+

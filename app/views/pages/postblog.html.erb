@@ -1,0 +1,25 @@
+<h1 class="qwerty"> Blogs Page</h1>
+<h1 class ="qwerty">Posted By <%= @cupcake.creator.email%>
+<h2 class="qwerty"><b><%= @cupcake.cupcake_name%></b><h2>
+<%= image_tag @cupcake.upload_image.persisted? ? @cupcake.upload_image : 'logo.png', class: 'w-100 rounded-circle', style: 'max-width: 20rem;margin-left: 30%' %>
+<p><b><%= @cupcake.cupcake_category%></b></p>
+<p><%= @cupcake.blog_description%></p>
+<%= link_to 'Recipe', recipeblog_path(@cupcake), class: "btn btn-primary" %> 
+<br>
+<br>
+<br>
+<div>
+<h2><%= @cupcake.comments.count%> Comments </h2>
+  <% @cupcake.comments.each do |c|%>
+   <li>
+     <%= c.creator.email%>
+     <%= c.comment_description%>
+  </li>
+   <% end %>   
+
+   <%= link_to 'New Comments', new_blog_comment_path(@cupcake) %>
+   </div>
+
+
+
+

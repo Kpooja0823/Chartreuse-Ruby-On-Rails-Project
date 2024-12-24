@@ -1,0 +1,13 @@
+  <h1>Create New Blog</h1>
+  <%= bootstrap_form_with model: @allblog, url: myblogs_path, method: :post, data: { turbo: false } do |f| %>
+    <%= f.text_field :cupcake_name %>
+    <%= f.text_field :cupcake_category %>
+      <%= f.text_field :blog_description %>
+      <%= f.text_field :location %>
+      <%= f.text_field :cupcake_recipe_title %>
+     <%= f.text_field :cupcake_recipe_description %>
+      <%= f.check_box :published %>
+      <%= f.datetime_field :published_at %>
+    <%= f.file_field :upload_image %>
+    <%= f.submit %>
+  <% end %>

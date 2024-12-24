@@ -1,0 +1,19 @@
+<h1>Search Results</h1>
+<p><%= link_to "Back", new_search_path %></p>
+
+<% if @search.search_cupcake.empty? %>
+    <p>No cupcakes were found.</p>
+<% else %>
+    <table>
+
+
+        <tbody>
+            <% @search.search_cupcake.each do |c| %>
+            <tr>
+                <td><%= c.cupcake_name %></td>
+                <%= link_to image_tag(c.cupcake_image, width:"10%"),postblog_path(c)%> 
+            </tr>
+            <% end %>
+        </tbody>
+</table>
+<% end %>

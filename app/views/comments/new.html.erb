@@ -1,0 +1,5 @@
+   <%= bootstrap_form_with model: @comment, method: :post, url: blog_comments_path(@cupcake), data: { turbo: false } do |f| %>
+  <%= f.text_field :comment_description %>
+  <%= f.submit %>
+  
+  <% end %>

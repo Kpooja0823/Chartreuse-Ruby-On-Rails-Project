@@ -1,0 +1,25 @@
+# == Schema Information
+#
+# Table name: cupcakes
+#
+#  id               :bigint           not null, primary key
+#  cupcake_category :string
+#  cupcake_image    :string
+#  cupcake_name     :string
+#  cupcake_price    :integer
+#  location         :string
+#  created_at       :datetime         not null
+#  updated_at       :datetime         not null
+#
+
+one:
+  cupcake_name: MyString
+  cupcake_image: MyString
+  cupcake_price: 1
+  cupcake_category: MyString
+
+two:
+  cupcake_name: MyString
+  cupcake_image: MyString
+  cupcake_price: 1
+  cupcake_category: MyString

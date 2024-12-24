@@ -1,0 +1,18 @@
+      <table class="table table-sm table-striped ml-4">
+   <thead>
+      <tr>
+      </tr>
+   </thead>
+   <tbody>
+   <tr>
+   <% @comment.each do |c|%>
+   <li>
+     <%= c.comment_description%>
+       </li>
+   <% end %>
+   <tr>
+   </tbody>
+  </table>
+
+
+<%= link_to 'New Comments', new_blog_comment_path(@cupcake) %>

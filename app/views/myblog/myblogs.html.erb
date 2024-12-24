@@ -1,0 +1,39 @@
+<br>
+<h4 class = 'd-flex justify-content-between mb-4'>
+<span> All Blog Posts </span>
+<%=link_to 'New Blog' , new_myblog_path , class: 'btn btn-primary'%>
+</h4>
+    <% @mb.each do |mb|%> 
+      <%= link_to myblog_path(mb) , class: 'text-decoration-none' do %>
+          <div class = "card mb-3 post-card">
+            <div class = "card-body">
+            <div class = "row">
+               <div class = "col-md-2">
+                <% if mb.upload_image.present? %>
+                  <div class = "header-img" style = "background-image: url(<%=url_for(mb.upload_image) %>);"> </div>
+                <% end%>
+                <br>
+                <% if mb.published? %>
+                  <%= link_to 'unpublish button' , unpublish_blog_path(mb),  class: 'btn btn-primary'%>
+                   <% else %>
+              <%= link_to 'publish  button' , publish_blog_path(mb) , class: 'btn btn-primary'%>
+              <% end %>
+             </div>
+              <div class = "col-md-10">
+                      <h5 class = "card-title mb-1 text-dark"> <%= mb.cupcake_name %> </h5>
+                       <p class = 'text-secondary mb-0'> <%= mb.cupcake_category%> </p>
+                        <p class = 'text-secondary mb-0'> <%= mb.blog_description%> </p>
+                       <p class = 'text-secondary mb-0'> <%= mb.location%> </p>                                             <p class = 'text-secondary mb-0'> <%= mb.location%> </p>
+                       <p class = 'text-secondary mb-0'> <%= mb.cupcake_recipe_title%> </p>
+                       <p class = 'text-secondary mb-0'> <%= mb.cupcake_recipe_description%> </p>
+                       <p class = 'text-secondary mb-0'> <%= mb.published%> </p>
+                       <p class = 'text-secondary mb-0'> <%= mb.published_at %> </p>
+                       <p class = 'text-secondary mb-0'> <%= mb.cupcake_image %> </p>
+
+              </div>
+            </div>
+            </div>
+            </div>           
+    <%end%>
+    <%end%>
+ 

@@ -1,0 +1,24 @@
+<h1> My Blog Details </h1>
+<% if @allblog.upload_image.attached? %>
+    <div class ="my-4">
+     <%= image_tag @allblog.upload_image, class: 'w-100 d-block mx-auto', style: 'max-width: 32rem;' %>
+    </div>
+<% end %>
+<p class = "align"> <%= @allblog.cupcake_name %> </p>
+<p class = "align"> <%= @allblog.cupcake_category %> </p>
+<p class = "align"> <%= @allblog.blog_description %> </p>
+<p class = "align"> <%= @allblog.location %> </p>
+<p class = "align"> <%= @allblog.cupcake_recipe_title %> </p>
+<p class = "align"> <%= @allblog.cupcake_recipe_description %> </p>
+<p class = "align"> <%= @allblog.published %> </p>
+<p class = "align"> <%= @allblog.published_at %> </p>
+
+
+<br>
+<div>
+<%=link_to 'Back' , myblogs_path , class: 'btn btn-primary' %>
+<%=link_to 'Edit' , edit_myblog_path , class: 'btn  btn-primary' %>
+<br>
+<%= button_to "Delete", myblog_path, method: :delete, data: {confirm: "Are You Sure?" }, class: "btn btn-danger" %>
+</div>
+<br>

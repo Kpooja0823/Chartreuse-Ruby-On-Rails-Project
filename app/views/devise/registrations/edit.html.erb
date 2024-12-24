@@ -1,0 +1,68 @@
+<h1>My Accounts</h1>
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+  <h4><%= "Hi,this #{current_user.email}" %> </h4>
+<br>
+<br>
+
+
+
+<%= image_tag 'user.png', :width => "20%"  %>
+
+      <h6>first_name :</h6>
+     <%= f.text_field :first_name, required: true, autofocus: true %>
+     <br>
+      <h6>last_name :</h6>
+     <%= f.text_field :last_name, autofocus: true %>
+<br>
+    <h6>Email :</h6>
+
+        <%= f.text_field :email, required: true, autofocus: true %>
+
+<br>
+    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+    <% end %>
+<br>
+    <h6>Bio :</h6>
+    <%= f.text_area :Bio, autofocus: true %>
+<br>
+<br>
+    <h6>password :</h6>
+
+    <%= f.text_field :password,
+                hint: "leave it blank if you don't want to change it",
+                required: false,
+                input_html: { autocomplete: "new-password" } %>
+                <br>
+                    <h6>password confirmation :</h6>
+
+    <%= f.text_field :password_confirmation,
+                required: false,
+                input_html: { autocomplete: "new-password" } %>
+                <br>
+                <br>
+
+                                    <h6>current password :</h6>
+
+    <%= f.text_field :current_password,
+                hint: "we need your current password to confirm your changes",
+                required: true,
+                input_html: { autocomplete: "current-password" } %>
+                                <br>
+
+                <br>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Update" %>
+  </div>
+<% end %>
+
+<h3>Cancel my account</h3>
+
+<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+
+<%= link_to "Back", :back %>

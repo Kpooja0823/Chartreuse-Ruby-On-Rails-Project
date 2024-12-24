@@ -1,0 +1,16 @@
+<h1>Advanced Search</h1>
+
+<%= form_with model: @search do |f| %>
+    <%= f.label :cupcake_name %>
+    <%= f.text_field :cupcake_name %>
+
+    <%= f.label :cupcake_category %>
+    <%= f.select :cupcake_category, options_for_select(@cats), include_blank: true %><br>
+
+    <%= f.label :location %>
+    <%= f.select :location, options_for_select(@locations), include_blank: true %><br><br>
+
+    <%= f.submit "Search" %>
+<% end %>
+
+<p><%= link_to "Back", '/home' %></p>
