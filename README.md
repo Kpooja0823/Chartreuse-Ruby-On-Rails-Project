@@ -1,5 +1,8 @@
 # README
 
+## Description 
+The Cupcake Blogging Website, built with Ruby on Rails, offers features like secure user authentication, a publish system for blogs, a favoriting system, and a search bar with keyword filters. It includes a user-friendly workspace for managing blogs, Active Storage for file uploads, and a redesigned, modern layout. The platform combines functionality and design to provide an engaging blogging experience.
+
 ## Team Members
 
 - Pooja Kamshetty 
